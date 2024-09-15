@@ -1,0 +1,105 @@
+body {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #f9f5ff 80%, #E3D8FD 20%); /* Top half light color, bottom half purple */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height of the container */
+}
+
+.name {
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: 700; /* Bold font */
+    margin-bottom: 20px; /* Space between name and box */
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    display: inline-block
+}
+
+.name::after {
+    content: ''; /* No content, just a decorative element */
+    position: absolute;
+    left: 50%; /* Start from the middle */
+    transform: translateX(-50%); /* Center the underline */
+    bottom: -5px; /* Adjust the distance from the text */
+    width: 50%; /* Adjust the width of the underline */
+    height: 2px; /* Adjust the thickness of the underline */
+    background-color: currentColor; /* Use the current text color */
+}
+
+
+.box {
+    background-color: #E3D8FD;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #28262C; /* Add black border to the perimeter */
+    font-family: 'Roboto', sans-serif;
+}
+
+.options {
+    background-color: #E3D8FD;
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.options li {
+    margin: 10px 0; /* Add some space between the list items */
+    padding: 10px; /* Add padding inside the labels */
+    border: 1px solid #28262C; /* Add a small black border around each label */
+    font-family: 'Roboto', sans-serif;
+    flex: 1; /* Make items take equal width */
+    text-align: center; /* Center text inside the items */
+}
+
+
+.options a {
+    color: #28262C;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.options a:hover {
+    color: #FFFFFF; /* Tomato color */
+}
+
+.social-media {
+    position: absolute;
+    bottom: 10%; /* Position the social media links in the bottom 30% of the page */
+    display: flex;
+    gap: 20px; /* Space between each social media link */
+}
+
+.social-media a {
+    margin: 0 10px; /* Space between each social media link */
+    color: black; /* Black text color */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px; /* Adjust font size as needed */
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.social-media a i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.social-media a:hover {
+    color: #FFD700; /* Change color on hover */
+}
