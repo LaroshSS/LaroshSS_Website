@@ -25,6 +25,14 @@ body {
     display: inline-block
 }
 
+.about-me {
+    background-color: #f9f5ff;
+    color: black;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
 .name::after {
     content: ''; /* No content, just a decorative element */
     position: absolute;
