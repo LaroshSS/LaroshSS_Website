@@ -1,7 +1,7 @@
 body {
     height: 100vh;
     margin: 0;
-    background: linear-gradient(to bottom, #f9f5ff 80%, #E3D8FD 20%); /* Top half light color, bottom half purple */
+    background: linear-gradient(to bottom, #FFFFFF 100%); 
     font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
@@ -33,30 +33,18 @@ body {
     border-radius: 10px;
 }
 
-.name::after {
-    content: ''; /* No content, just a decorative element */
-    position: absolute;
-    left: 50%; /* Start from the middle */
-    transform: translateX(-50%); /* Center the underline */
-    bottom: -5px; /* Adjust the distance from the text */
-    width: 50%; /* Adjust the width of the underline */
-    height: 2px; /* Adjust the thickness of the underline */
-    background-color: currentColor; /* Use the current text color */
-}
-
-
 .box {
-    background-color: #E3D8FD;
+    background-color: #FFFFFF;
     text-align: center;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 2px solid #28262C; /* Add black border to the perimeter */
     font-family: 'Roboto', sans-serif;
 }
 
 .options {
-    background-color: #E3D8FD;
+    background-color: #FFFFFF;
     list-style-type: none; /* Remove default list styling */
     padding: 0;
     margin: 0;
@@ -84,7 +72,7 @@ body {
 }
 
 .options a:hover {
-    color: #FFFFFF; /* Tomato color */
+    color: red; /* Tomato color */
 }
 
 .social-media {
@@ -109,5 +97,5 @@ body {
 }
 
 .social-media a:hover {
-    color: #FFD700; /* Change color on hover */
+    color: red; /* Change color on hover */
 }
