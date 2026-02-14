@@ -1,0 +1,43 @@
+# Valentine's Date Website - Apache Configuration
+
+# Enable rewrite engine
+RewriteEngine On
+
+# Make index.html the default page
+DirectoryIndex index.html
+
+# Prevent directory browsing
+Options -Indexes
+
+# Protect responses.json from direct access (optional)
+# Uncomment these lines if you want to prevent direct downloads
+# <Files "responses.json">
+#     Order Allow,Deny
+#     Deny from all
+# </Files>
+
+# Optional: Password protect admin.php
+# Uncomment and configure if you want password protection
+# <Files "admin.php">
+#     AuthType Basic
+#     AuthName "Admin Access"
+#     AuthUserFile /full/path/to/.htpasswd
+#     Require valid-user
+# </Files>
+
+# Set proper MIME types
+AddType application/json .json
+
+# Enable GZIP compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/json application/javascript
+</IfModule>
+
+# Browser caching for static files
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+</IfModule>
